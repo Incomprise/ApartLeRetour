@@ -17,6 +17,10 @@
         <server name="APP_ENV" value="test" force="true" />
         <env name="APP_SECRET" value="287f2178af9e0c250e8219a9df833504"/>
         <!-- ###- symfony/framework-bundle ### -->
+
+        <!-- ###+ symfony/mailer ### -->
+        <!-- MAILER_DSN=null://null -->
+        <!-- ###- symfony/mailer ### -->
     </php>
 
     <testsuites>
