@@ -96,6 +96,7 @@ class FrontAssets extends AbstractSmartyPlugin
             new SmartyPluginDescriptor('function', 'getAssetsFromEntrypoints', $this, 'getAssetsFromEntrypoints'),
             new SmartyPluginDescriptor('function', 'psesByProduct', $this, 'psesByProduct'),
             new SmartyPluginDescriptor('function', 'extractOptions', $this, 'extractOptions'),
+            new SmartyPluginDescriptor('function', 'test', $this, 'test'),
         ];
     }
 
@@ -171,11 +172,11 @@ class FrontAssets extends AbstractSmartyPlugin
     public function getAssetsFromEntrypoints($arg)
     {
         $result = '';
-        
+
         if (!isset($arg['entry']) || !isset($arg['type'])) {
             return $result;
         }
-        
+
         foreach ($this->assetsManager->getAssets($arg['entry'], $arg['type']) as $asset) {
             if ($arg['type'] === 'js') {
                 $result .= "<script src='$asset' defer></script>";

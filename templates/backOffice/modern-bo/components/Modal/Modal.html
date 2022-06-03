@@ -14,24 +14,3 @@
   </div>
 </div>
 </div>
-
-
-<script>
-    let modal = document.querySelector(".modal");
-    let trigger = document.querySelector(".trigger");
-    let close = document.querySelector(".closed-button");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
-}
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-trigger.addEventListener("click", toggleModal);
-close.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
-</script>
